@@ -1,0 +1,22 @@
+<%- include("header") -%>
+<div class="box" id="heading">
+<h1><%= current_date %> </h1>
+</div>
+
+<div class="box">
+
+    <form class="item" accept="/" method="post">
+        <input type="text" name="task" placeholder="New task" required />
+        <button type="submit" name="list" value="">Add</button>
+        </form>
+        
+    <% for(let i=0;i<taskList.length;i++){ %>
+        <div class="item">
+        <input type="checkbox">
+        <p> <%= taskList[i] %> </p>
+        </div>
+        <%}%>
+
+        
+</div>
+<%- include("footer") -%>
